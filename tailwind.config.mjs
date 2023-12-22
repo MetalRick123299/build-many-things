@@ -1,4 +1,5 @@
 import daisyui from "daisyui";
+import { iconsPlugin, dynamicIconsPlugin } from "@egoist/tailwindcss-icons";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -7,5 +8,5 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [daisyui],
+  plugins: [daisyui, iconsPlugin(), dynamicIconsPlugin()],
 };

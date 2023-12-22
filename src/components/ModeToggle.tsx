@@ -24,11 +24,18 @@ export function ModeToggle() {
   };
 
   return (
-    <button
-      onClick={toggleTheme}
-      className="absolute left-0 top-0 dark:text-white"
-    >
-      {theme}
-    </button>
+    <label className="swap swap-rotate absolute left-0 top-0 dark:text-white">
+      {/* this hidden checkbox controls the state */}
+      <input
+        type="checkbox"
+        className="theme-controller"
+        value="light"
+        checked={theme === "theme-light"}
+        onChange={toggleTheme}
+      />
+
+      <span className="i-[ph--sun] swap-on h-8 w-8" />
+      <span className="i-[ph--moon] swap-off h-8 w-8" />
+    </label>
   );
 }
